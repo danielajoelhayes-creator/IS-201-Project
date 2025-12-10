@@ -1,0 +1,116 @@
+.bold { font-weight: bold;}
+
+/* Page-specific styles for scratch.html */
+.scratch-page {
+	background: linear-gradient(180deg, #f7fbfc 0%, #ffffff 100%);
+	color: #212529;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.scratch-page .Common.header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem 1.5rem;
+	justify-content: space-between;
+	background: rgba(0, 133, 161, 0.06);
+	padding: 0.75rem 1rem;
+	border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.scratch-page .Common.header p.bold {
+	margin: 0;
+	font-size: 1.125rem;
+	color: #006a81;
+}
+
+.scratch-page .Common.header a {
+	color: #006a81;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.scratch-page .section {
+	max-width: 950px;
+	margin: 2rem auto;
+	padding: 1.25rem 1.5rem;
+	background: rgba(255,255,255,0.95);
+	border-radius: 10px;
+	box-shadow: 0 6px 18px rgba(22, 35, 40, 0.06);
+}
+
+.scratch-page h2 {
+	color: #004d59;
+	margin-bottom: 0.75rem;
+}
+
+.scratch-page p + p {
+	margin-top: 0.75rem;
+}
+
+.scratch-page ol {
+	padding-left: 1.25rem;
+}
+
+.scratch-page .responsive-img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 8px;
+	box-shadow: 0 6px 14px rgba(24, 40, 45, 0.06);
+	margin: 0.5rem 0 0.75rem;
+}
+
+.scratch-page figure {
+	margin: 1rem 0;
+}
+
+.scratch-page figcaption {
+	font-size: 0.9rem;
+	color: #58666a;
+	margin-top: 0.35rem;
+}
+
+/* Make iframes (YouTube, Tableau) responsive */
+.scratch-page iframe,
+.scratch-page .tableauPlaceholder {
+	width: 100% !important;
+	max-width: 100% !important;
+	height: auto !important;
+	aspect-ratio: 16 / 9;
+	border-radius: 8px;
+	box-shadow: 0 8px 20px rgba(22, 35, 40, 0.08);
+}
+
+.scratch-page .tableauPlaceholder object.tableauViz {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+/* Lightweight card style for lists or highlights */
+.scratch-page .card {
+	background: linear-gradient(180deg, #ffffff 0%, #fbfeff 100%);
+	border: 1px solid rgba(0,0,0,0.06);
+	padding: 0.85rem;
+	border-radius: 8px;
+	margin-bottom: 0.75rem;
+}
+
+/* Footer */
+.scratch-page footer {
+	text-align: center;
+	padding: 1rem 0 2rem;
+	color: #6c757d;
+}
+
+@media (max-width: 600px) {
+	.scratch-page .Common.header { padding: 0.6rem; }
+	.scratch-page .Common.header p.bold { font-size: 1rem; }
+	.scratch-page .section { margin: 1rem; padding: 1rem; }
+}
+
+/* Utility tweaks */
+.scratch-page a { transition: color 0.15s ease; }
+.scratch-page a:hover { color: #004d59; text-decoration: underline; }
