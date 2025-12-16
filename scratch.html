@@ -13,7 +13,7 @@
         <p class="bold">My Hawaii Adventures</p>
         <a href="index.html">Home</a> |
         <a href="education.html">Education</a> |
-        <a href="experience.html">Experience</a>
+        <a href="experience.html">Experience</a> |
         <a href="skills.html">Skills</a> |
         <a href="contact.html">Contact</a> |
         <a href="game.html">Game</a>
@@ -30,7 +30,7 @@
 
         <!-- Ordered list for each trip with unordered highlights -->
         <ol>
-            <li>Trip 1 (Year)
+            <li>Trip 1 (2020)
                 <ul>
                     <li>Stayed at the Royal Hawaiian Hotel</li>
                     <li>Experienced a crazy flash flood evacuation!</li>
@@ -41,7 +41,7 @@
                     <li>Tried Haleiwa acai bowls</li>
                 </ul>
             </li>
-            <li>Trip 2 (Year)
+            <li>Trip 2 (2024)
                 <ul>
                     <li>Visited Kahuku Food Trucks — amazing local eats</li>
                     <li>Attended “House Without a Key” for hula performance</li>
@@ -54,20 +54,22 @@
 
         <!-- Images -->
         <figure>
-            <img src="images/waikiki.jpg" alt="Waikiki Beach" class="responsive-img">
-            <figcaption>Waikiki Beach from my first trip</figcaption>
+            <figcaption>Look at the beautiful Waikiki beach!</figcaption>
+            <img src="Images/Beach.jpg" 
+            alt="Waikiki Beach" class="responsive-img">
         </figure>
 
         <figure>
-            <img src="images/big-island.jpg" alt="Big Island Volcano" class="responsive-img">
-            <figcaption>Look at his cool Banyan tree!</figcaption>
+            <figcaption>Look at this yummy Haleiwa acai bowl.</figcaption>
+            <img src="Images/Acai.JPG" 
+            alt="Haleiwa Acai Bowl" class="responsive-img">
         </figure>
          
         <p>Check out this video of Haleiwa!</p>
 
         <!-- YouTube embed -->
     <div>
-                <p>Check out this video of one of the many rides at Universal Studios!</p>
+                
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/FJe42WzToFE?si=tiT8Qxj2bf1GgSIb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
@@ -102,6 +104,37 @@
             <param name='language' value='en-US' />
         </object>
     </div>
+    <script>
+console.log("SCRIPT LOADED!");
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.src);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    console.log("Dropped!");
+
+    const inside = document.getElementById("insideBlender");
+    const text = document.getElementById("dropText");
+
+    let currentHeight = parseInt(inside.style.height);
+    if (isNaN(currentHeight)) currentHeight = 0;
+
+    inside.style.height = (currentHeight + 40) + "px";
+    text.textContent = "Ingredient added!";
+}
+
+function blendSmoothie() {
+    console.log("Blend clicked!");
+    document.getElementById("dropText").textContent = "🍹 Smoothie Ready!";
+}
+</script>
+
 
 <script type='text/javascript'>
     var divElement = document.getElementById('viz1765308682433');
@@ -119,7 +152,7 @@
 
 
      <!-- Link to mini web app -->
-<p>Try my mini web app: <a href="game.html">Guess the Island Game</a></p>
+<p class="game-cta">🎮 Try my mini web app: <a href="game.html">Guess the Island Game</a> 🎮</p>
     </div>
 
     <!-- Footer -->

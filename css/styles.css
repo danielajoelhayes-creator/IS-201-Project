@@ -10796,3 +10796,65 @@ header.masthead .post-heading .meta a {
     font-size: 2.25rem;
   }
 }
+
+/* Custom navigation hover effects for page links */
+.navbar-nav .nav-link[href*="education"]:hover::after,
+.navbar-nav .nav-link[href*="experience"]:hover::after,
+.navbar-nav .nav-link[href*="skills"]:hover::after {
+  content: " →";
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link[href*="education"]::after,
+.navbar-nav .nav-link[href*="experience"]::after,
+.navbar-nav .nav-link[href*="skills"]::after {
+  content: " →";
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.navbar-nav .nav-link[href*="education"]:hover,
+.navbar-nav .nav-link[href*="experience"]:hover,
+.navbar-nav .nav-link[href*="skills"]:hover {
+  transform: translateX(2px);
+  transition: transform 0.2s ease;
+}
+
+/* Hover effects for main content post-preview links */
+.post-preview a[href*="education"]:hover .post-title::after,
+.post-preview a[href*="experience"]:hover .post-title::after,
+.post-preview a[href*="skills"]:hover .post-title::after,
+.post-preview a[href="post.html"]:hover .post-title::after {
+  content: " → Learn More";
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #0085A1;
+  margin-left: 10px;
+}
+
+.post-preview a[href*="education"] .post-title::after,
+.post-preview a[href*="experience"] .post-title::after,
+.post-preview a[href*="skills"] .post-title::after,
+.post-preview a[href="post.html"] .post-title::after {
+  content: " → Learn More";
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.post-preview a[href*="education"]:hover,
+.post-preview a[href*="experience"]:hover,
+.post-preview a[href*="skills"]:hover,
+.post-preview a[href="post.html"]:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
